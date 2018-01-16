@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Cubic Billing Software</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+    <link rel="stylesheet" href="css/layout.css">
+  <!-- Font Awesome -->
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="css/custom.css">
+
+  <link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/datepicker3.css">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><img src="images/mob-logo.png"  alt=""/></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><img src="images/logo.png"  alt=""/></span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+        
+       
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#">
+              <img src="images/user2-160x160.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs"> Admin</span>
+            </a>
+            
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+        
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+ <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+       
+        <li class="treeview">
+          <a href="index.html">
+           <div class="menu-img"><img src="images/home@24.png" width="24" height="24" alt=""/></div>
+            <span class="menu-text">Entry</span>
+         
+          </a>
+          
+        </li>
+        <li class="treeview">
+          <a href="#">
+              <div class="menu-img"><img src="images/complaints@24.png" width="24" height="24" alt=""/> </div>
+            <span class="menu-text">Master</span>
+            <span class="pull-right-container">
+             
+          </span>
+          </a>
+          
+        </li>
+        
+            <li class="treeview">
+          <a href="#">
+            <div class="menu-img"><img src="images/escalation@24.png" width="24" height="24" alt=""/> </div>
+          <span class="menu-text">Item</span>
+            <span class="pull-right-container">
+              
+          </span>
+          </a>
+        </li>
+          
+        <li class="treeview">
+          <a href="#">
+            <div class="menu-img"><img src="images/escalation@24.png" width="24" height="24" alt=""/> </div>
+          <span class="menu-text">Report</span>
+            <span class="pull-right-container">
+              
+          </span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+ 
+            <div class="menu-img"> <img src="images/distributor@24.png" width="24" height="24" alt=""/></div> <span class="menu-text">Accounts</span>
+            
+          </a>
+          
+        </li>
+        <li class="active treeview">
+          <a href="#">
+         <div class="menu-img"> <img src="images/customer@24.png" width="24" height="24" alt=""/></div> <span class="menu-text">Features</span>
+          
+          </a>
+          
+        </li>
+        <li class="treeview">
+          <a href="#">
+             <div class="menu-img"><img src="images/rating@24.png" width="24" height="24" alt=""/></div>
+          <span class="menu-text">Company</span>
+          </a>
+        </li>
+    
+             <li class="treeview">
+          <a href="#">
+             <div class="menu-img"><img src="images/rating@24.png" width="24" height="24" alt=""/></div>
+          <span class="menu-text">Restore</span>
+          </a>
+            
+          
+        </li>
+           <li class="treeview">
+          <a href="#">
+             <div class="menu-img"><img src="images/rating@24.png" width="24" height="24" alt=""/></div>
+          <span class="menu-text">Backup</span>
+          </a>
+            
+          
+        </li>
+          
+           </li>
+           <li class="treeview">
+          <a href="#">
+             <div class="menu-img"><img src="images/rating@24.png" width="24" height="24" alt=""/></div>
+          <span class="menu-text">Quit</span>
+          </a>
+            
+          
+        </li>
+          
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    
+
+    <!-- Main content -->
+    <section class="content">
+
+            <div class="row">
+        <div class="col-md-12">
+          <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">Meeting</h3>
+            </div>
+          <div  id="register-form" novalidate>
+              
+             
+              
+              <div class="row">
+                <div class="col-md-6 box-body">
+              
+       
+                    <div class="col-md-3">Project Code</div>
+                    <div class="col-md-9">
+                  <div class="form-group">
+                        <select class="form-control" id="projectname"  name="projectname" required>
+                        
+                        <option value="">choose</option>
+                          <option value="Project-1">MKDB01 </option>
+                          <option value="Project-1">MKDB02</option>
+                          
+                        </select>
+                      </div>
+                    </div>
+               
+              
+  
+                 
+                  </div>
+                  
+                  
+                   <div class="col-md-6 box-body">
+              
+              <div class="form-group">
+                    <div class="col-md-3">Meeting Type</div>
+                    <div class="col-md-9">
+                   <div class="form-group">
+                        <select class="form-control" id="meetingtype"  name="meetingtype" required>
+                        
+                        <option value="">choose</option>
+                          <option name="Introductory" value="Introductory">Introductory</option>
+                          <option  name="Kick - Off"  value="Kick - Off" > Kick - Off</option>
+                          
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+              
+  
+                 
+                  </div>
+           
+              
+
+                 
+                  </div>
+               
+                
+                <div class="row">
+                <div class="col-md-6 box-body">
+              
+                  
+                  
+                  
+                   
+              
+             
+                    <div class="col-md-3">Meeting Description</div>
+                    <div class="col-md-9">
+                    
+                    
+                     <div class="form-group">
+          
+                  <textarea class="form-control" id="contentarea" name="contentarea" rows="3" required></textarea>
+                </div>
+                    
+                    
+           
+                  
+                    </div>
+                
+              
+  
+                 
+              
+                </div>
+                
+                <div class="col-md-6 box-body">
+              
+                  <div class="form-group">
+                    <div class="col-md-3">Meeting Date</div>
+                    <div class="col-md-9">
+                    
+                         <div class="input-group date datetimepicker">
+                    <input type='text' class="form-control"  value="12-Feb-2015" required="" name="meetingdate"  />
+                    <span class="input-group-addon"> <span class="glyphicon glyphicon-calendar"></span> </span> 
+                    </div>
+                    
+                    
+                    
+          
+                    
+           
+
+                    </div>
+                  </div>
+              
+  
+                 
+                  </div>
+                
+                </div>
+            
+                
+            
+    
+    
+    
+              <div class="row">
+                <div class="col-md-6 box-body">
+              
+                  
+                  
+                  
+                   
+              
+             
+                    <div class="col-md-3">Duration</div>
+                    <div class="col-md-9">
+                    
+                    
+                     <div class="form-group">
+                   <input type="text" name="firstname" id="firstname" class="form-control">
+                  
+                </div>
+                    
+                    
+           
+                  
+                    </div>
+                
+              
+  
+                 
+              
+                </div>
+                
+                
+                
+                </div>
+              
+              
+              
+     
+                
+                    <div class="box-footer">
+                <button class="btn btn-primary" type="submit" id="target">ADD TASKS</button>
+                
+              </div>
+              <!-- /.box-body -->
+         
+          
+              
+            </div>
+          </div>
+        </div>
+        <!-- /.col (left) --> 
+            <div class="col-md-12 prerequisitie">
+          <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title"> Prerequisite Tasks</h3>
+            </div>
+             <div class="viewform-wrapper" id="prerequisitie">
+         <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th width="32%">Task Name</th>
+						  <th>Skip Task</th>
+                          <th width="22%"> Due Date</th>
+                          <th width="21%">Owner</th>
+                          <th width="25%">Notifications</th>
+
+                      </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="odd" role="row">
+                          <td class="">Confirm Final Draft Charter</td>
+							<td><input type="checkbox" class="checkbox flat-red" id="pre_skip1"></td>
+                          <td><div class="input-group date datetimepicker">
+                    <input type='text' class="form-control" required="" name="meetingdate"  />
+                    <span class="input-group-addon"> <span class="glyphicon glyphicon-calendar"></span> </span> 
+                    </div></td>
+                          <td>                     <div class="input-group">
+      <input type="text" class="form-control" name="projectassitant" required="" placeholder="">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"> <i class="glyphicon glyphicon-user"></i></button>
+      </span>
+     
+    </div><!-- /input-group --></td>
+                      <td>                     <div class="input-group">
+      <input type="text" class="form-control" name="projectassitant" required="" placeholder="">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"> <i class="glyphicon glyphicon-user"></i> <i class="glyphicon glyphicon-user"></i></button>
+      </span>
+     
+    </div><!-- /input-group --></td>
+                        </tr>
+                        <tr class="even" role="row">
+                        <td class="">Confirm Final Draft SAP</td>
+                        <td><input type="checkbox" class="checkbox flat-red" id="pre_skip2"></td>
+                          <td><div class="input-group date datetimepicker">
+                    <input type='text' class="form-control" required="" name="meetingdate"  />
+                    <span class="input-group-addon"> <span class="glyphicon glyphicon-calendar"></span> </span> 
+                    </div></td>
+                          <td> <div class="input-group">
+      <input type="text" class="form-control" name="projectassitant" required="" placeholder="">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"> <i class="glyphicon glyphicon-user"></i></button>
+      </span>
+     
+    </div><!-- /input-group --></td>
+                           <td>                     <div class="input-group">
+      <input type="text" class="form-control" name="projectassitant" required="" placeholder="">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"> <i class="glyphicon glyphicon-user"></i> <i class="glyphicon glyphicon-user"></i></button>
+      </span>
+     
+    </div><!-- /input-group --></td>
+                                          </tr>
+                                          
+                                          
+                                           <tr class="odd" role="row">
+                          <td class="">Confirm Final Draft TFL Mock Up</td>
+							<td><input type="checkbox" class="checkbox flat-red" id="pre_skip3"></td>
+                          <td><div class="input-group date datetimepicker">
+                    <input type='text' class="form-control" required="" name="meetingdate"  />
+                    <span class="input-group-addon"> <span class="glyphicon glyphicon-calendar"></span> </span> 
+                    </div></td>
+                          <td> <div class="input-group">
+      <input type="text" class="form-control" name="projectassitant" required="" placeholder="">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"> <i class="glyphicon glyphicon-user"></i></button>
+      </span>
+     
+    </div><!-- /input-group --></td>
+                      <td>                     <div class="input-group">
+      <input type="text" class="form-control" name="projectassitant" required="" placeholder="">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"> <i class="glyphicon glyphicon-user"></i> <i class="glyphicon glyphicon-user"></i></button>
+      </span>
+     
+    </div><!-- /input-group --></td>
+                      
+                        </tr>
+                      </tbody>
+                    </table>
+                    </div>
+                    
+                    
+                    
+         
+                    
+          </div>
+        </div>
+        
+        
+          <div class="col-md-12 prerequisitie">
+          <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title"> Post Meeting Tasks </h3>
+            </div>
+             <div class="viewform-wrapper" id="postmeeting">
+         <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th width="32%">Task Name</th>
+							<th> Skip Task</th>
+                          <th width="22%"> Due Date</th>
+                          <th width="21%">Owner</th>
+                             <th width="25%">Notifications</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="odd" role="row">
+                          <td class="">Upload Meeting Minutes</td>
+                          <td><input type="checkbox" class="checkbox flat-red" id="skip1"></td> 
+                          <td> <div class="input-group date datetimepicker">
+                    <input type='text' class="form-control" required="" name="meetingdate"  />
+                    <span class="input-group-addon"> <span class="glyphicon glyphicon-calendar"></span> </span> 
+                    </div></td>
+                      <td>                     <div class="input-group">
+      <input type="text" class="form-control" name="projectassitant" required="" placeholder="">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"> <i class="glyphicon glyphicon-user"></i></button>
+      </span>
+     
+    </div><!-- /input-group --></td>
+                           <td>                     <div class="input-group">
+      <input type="text" class="form-control" name="projectassitant" required="" placeholder="">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"> <i class="glyphicon glyphicon-user"></i> <i class="glyphicon glyphicon-user"></i></button>
+      </span>
+     
+    </div><!-- /input-group --></td>
+                      
+                        </tr>
+                        <tr class="even" role="row">
+                        <td class="">Approve Meeting Minutes</td>
+                        <td><input type="checkbox" class="checkbox flat-red" id="skip2"></td>
+                          <td><div class="input-group date datetimepicker">
+                    <input type='text' class="form-control" required="" name="meetingdate"  />
+                    <span class="input-group-addon"> <span class="glyphicon glyphicon-calendar"></span> </span> 
+                    </div></td>
+                          <td>                     <div class="input-group">
+      <input type="text" class="form-control" name="projectassitant" required="" placeholder="">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"> <i class="glyphicon glyphicon-user"></i></button>
+      </span>
+     
+    </div><!-- /input-group --></td>
+    
+    <td>                     <div class="input-group">
+      <input type="text" class="form-control" name="projectassitant" required="" placeholder="">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"> <i class="glyphicon glyphicon-user"></i> <i class="glyphicon glyphicon-user"></i></button>
+      </span>
+     
+    </div><!-- /input-group --></td>
+                                          </tr>
+                                          
+                                          
+                                           <tr class="odd" role="row">
+                          <td class="">Approval Notification</td>
+                          <td><input type="checkbox" class="checkbox flat-red" id="skip3"></td>
+                          <td><div class="input-group date datetimepicker">
+                    <input type='text' class="form-control" required="" name="meetingdate"  />
+                    <span class="input-group-addon"> <span class="glyphicon glyphicon-calendar"></span> </span> 
+                    </div></td>
+                     <td>                     <div class="input-group">
+      <input type="text" class="form-control" name="projectassitant" required="" placeholder="">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"> <i class="glyphicon glyphicon-user"></i></button>
+      </span>
+     
+    </div><!-- /input-group --></td>
+                      
+                      <td>                     <div class="input-group">
+      <input type="text" class="form-control" name="projectassitant" required="" placeholder="">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"> <i class="glyphicon glyphicon-user"></i> <i class="glyphicon glyphicon-user"></i></button>
+      </span>
+     
+    </div><!-- /input-group --></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    </div>
+                    
+                      <div class="box-footer text-center">
+            
+                <button class="btn btn-primary" type="submit">SUBMIT</button>
+                 <button class="btn btn-default " type="submit">CANCEL</button>
+              </div>
+                    
+         
+                    
+          </div>
+        </div>
+      </div>
+      <!-- /.row --> 
+  
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+  
+ 
+    Copyright &copy; 2016 <a href="http://in.grundfos.com/" target="_blank">Cubic Billing Software</a> All rights
+    reserved.
+  </footer>
+
+ 
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/lumino.glyphs.js"></script>
+
+
+<!-- Bootstrap 3.3.6 -->
+<script src="js/bootstrap.min.js"></script>
+
+
+<script src="js/app.min.js"></script>
+
+<script src="js/dashboard.js"></script>
+
+<script src="js/rating.js"></script>
+<script src="js/Chart.js"></script> 
+<!--<script src="js/pie-chart.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="js/morris.js"></script>
+ 
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.js"></script> 
+<script>
+ $(function() {
+$('.datetimepicker').datetimepicker({	
+format: 'dd/mm/yyyy',
+
+
+ minView : 2,
+      autoclose: true
+});
+});
+</script>
+<script>
+
+//$(window).resize(function()
+// {
+//	drawChart().reload();
+//	
+//	
+//});
+</script>
+</body>
+</html>
